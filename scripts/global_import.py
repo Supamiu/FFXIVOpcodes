@@ -35,7 +35,7 @@ def apply_diff(ipcs_text: str, diff: list[dict], version: str) -> tuple[str, int
 
     # Single-pass regex: match any uncommented opcode assignment line
     pattern = re.compile(
-        r"^(\s+\w.*=\s*)(0x[0-9A-Fa-f]+)(\s*,\s*//\s*updated\s+)\S+",
+        r"^(\s+\w.*=\s*)(0x[0-9A-Fa-f]+)(\s*,\s*//\s*)\S+",
         re.IGNORECASE | re.MULTILINE,
     )
 
